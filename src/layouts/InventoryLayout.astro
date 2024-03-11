@@ -1,0 +1,12 @@
+---
+import ItemCard from "../components/ItemCard.vue";
+import "../styles/Inventory.css";
+
+interface Props {
+  page_title: string;
+}
+
+const { page_title } = Astro.props;
+---
+
+<ItemCard page_title={page_title} client:load />

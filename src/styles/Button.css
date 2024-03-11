@@ -1,0 +1,30 @@
+.btn {
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  padding: 6px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn_primary {
+  border: 1px solid #132322;
+  color: #132322;
+  background-color: #fff;
+}
+
+.btn_small {
+  width: 160px;
+}
+
+@media only screen and (max-width: 900px) {
+  .btn_small {
+    width: 100%;
+  }
+}

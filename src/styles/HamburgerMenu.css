@@ -1,0 +1,94 @@
+/* General sidebar styles */
+.menu_container {
+  position: fixed;
+  right: inherit;
+  z-index: 1100;
+  width: 300px;
+  height: 100%;
+  transition: all 0.5s ease 0s;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.menu_container.visible {
+  transform: translate3d(0, 0, 0);
+}
+
+.menu_list {
+  background: #fff;
+  padding: 2.5em 1.5em 0;
+  font-size: 16px;
+  box-shadow: none;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.item_list {
+  height: 100%;
+}
+
+.menu_item {
+  border-bottom: 1px solid #ededed;
+  color: #18583a;
+  display: block;
+  font-family: "DM Mono", "sans-serif";
+  font-size: 16px;
+  margin-bottom: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.menu_item:hover {
+  color: #3ddc91;
+}
+
+/* ===============Burger button styling==================== */
+/* Position and sizing of burger button */
+.hamburger {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.hamburger_button,
+.close_button {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  font-size: 0px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Position and sizing of clickable cross button */
+.cross_button {
+  position: absolute;
+  height: 20px !important;
+  width: 20px !important;
+  right: 16px !important;
+  top: 16px !important;
+}
+
+/* Color/shape of close button cross */
+.hamburger_icon,
+.cross_icon {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .menu_content {
+    width: 100% !important;
+  }
+}

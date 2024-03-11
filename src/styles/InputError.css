@@ -1,0 +1,30 @@
+.form_group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input_error {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid #ededed;
+  outline: none;
+  padding: 10px 0;
+}
+
+.input_error.error {
+  border-bottom-color: #e2231a;
+}
+
+.input_error.error::placeholder {
+  color: #e2231a;
+}
+
+.error_icon {
+  color: #e2231a;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}

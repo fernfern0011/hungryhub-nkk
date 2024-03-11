@@ -1,54 +1,21 @@
-# Astro Starter Kit: Basics
+## 🧞 How to setup the project
 
-```sh
-npm create astro@latest -- --template basics
+Run the two following commands accordingly
+
+| Command       | Action                                      |
+| :------------ | :------------------------------------------ |
+| `npm install` | Installs dependencies                       |
+| `npm run dev` | Starts local dev server at `localhost:4321` |
+
+## 🚀 Implementation Approach and Decisions made
+
 ```
+1. BaseLayout.astro is a reusable page template that takes in BaseHead.astro and wrapped all the files in pages folder
+2. The components that need logic will be written in Vue. There are 3 Vue files in this project; HamburgerMenu, ItemCard and LoginForm
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+Decisions made
+1. I have created 'styles' folder to organize css files to follow best practices
+2. At first I had a separate Filter.vue in which I intended to pass the selectedSort value to ItemCard.vue. However, I couldn't find a way to do so. Thus, I combined them into one file (ItemCard.vue)
+3. Login Page works as intended for demonstration purpose (accept 'standard_user' as the username and 'secret_sauce' as the password). Thus, I didn't implement the session for this assessment.
+4. Inventory Page is only able to display the item list based on the sort selected. 'Add to cart' button has no function.
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

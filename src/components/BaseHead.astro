@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content="Front-end Developer Intern Take-Home Assignment using Vue.js and Astro"
+/>
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500"
+/>
+<title>{title}</title>
+
+<style is:global>
+  body {
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #fff;
+    color: #132322;
+    margin: 0;
+    height: 100vh;
+  }
+</style>

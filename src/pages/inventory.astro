@@ -1,0 +1,27 @@
+---
+import FooterLayout from "../layouts/FooterLayout.astro";
+import HeaderLayout from "../layouts/HeaderLayout.astro";
+import InventoryLayout from "../layouts/InventoryLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Swag Labs";
+const page_title = "Products";
+---
+
+<BaseLayout title={title}>
+  <div class="page_wrapper" id="page_wrapper">
+    <div id="contents_wrapper">
+      <HeaderLayout title={title} />
+      <InventoryLayout page_title={page_title} />
+    </div>
+    <FooterLayout />
+  </div>
+</BaseLayout>
+
+<style>
+  .page_wrapper {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+</style>
